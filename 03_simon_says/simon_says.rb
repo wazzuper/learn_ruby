@@ -39,10 +39,10 @@ def titleize(words)
     word.capitalize! if current_index == 0
     word.capitalize! if stop_words.include?(word)
 
-    if current_index == array_of_words.index(array_of_words.last)
-      word.strip!
-    else
+    if current_index != array_of_words.index(array_of_words.last)
       word += ' '
+    else
+      word.strip!
     end
 
     result << word
