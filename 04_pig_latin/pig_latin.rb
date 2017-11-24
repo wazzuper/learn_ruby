@@ -43,11 +43,7 @@ def translate(words)
     end
 
     if array_of_words.length > 1
-      if current_index != array_of_words.index(array_of_words.last)
-        word += ' '
-      else
-        word.strip!
-      end
+      word += ' ' if current_index != array_of_words.index(array_of_words.last)
     end
 
     result << word
@@ -55,3 +51,5 @@ def translate(words)
 
   result
 end
+
+puts translate('vika dodik lisiy school quite quick')

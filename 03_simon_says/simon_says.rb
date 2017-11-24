@@ -38,17 +38,10 @@ def titleize(words)
 
     word.capitalize! if current_index == 0
     word.capitalize! if stop_words.include?(word)
-
-    if current_index != array_of_words.index(array_of_words.last)
-      word += ' '
-    else
-      word.strip!
-    end
-
+    word += ' ' if current_index != array_of_words.index(array_of_words.last)
+    
     result << word
   end
 
   result
 end
-
-puts titleize('the bridge over the river kwai')
