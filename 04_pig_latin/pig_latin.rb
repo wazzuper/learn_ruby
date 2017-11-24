@@ -51,5 +51,3 @@ def translate(words)
 
   result
 end
-
-puts translate('vika dodik lisiy school quite quick')
